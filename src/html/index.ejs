@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Testing123</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      padding-bottom: 3rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ea00ff
+    }
+
+    #form {
+      background: rgba(0, 0, 0, 0.15);
+      padding: 0.25rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      height: 5rem;
+      box-sizing: border-box;
+      backdrop-filter: blur(10px);
+    }
+
+    #input {
+      border: none;
+      padding: 0 1rem;
+      flex-grow: 3;
+      border-radius: 2rem;
+      margin: .5rem;
+    }
+
+    #input:focus {
+      outline: none;
+    }
+
+    #form>button {
+      background: #333;
+      border: none;
+      padding: 0 1rem;
+      margin: 0.25rem;
+      border-radius: 3px;
+      outline: none;
+      color: rgb(255, 174, 0);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    #messages {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #messages>li {
+      padding: 0.5rem 1rem;
+    }
+
+    #messages>li:nth-child(odd) {
+      background: #1eff00;
+      color: #000000;
+      opacity: .75;
+      z-index: 0;
+    }
+    #login-box-id {
+    position: absolute;
+    bottom: 100;
+    right: 0;
+    z-index: 999999;
+}
+    #messages>li:nth-child(even) {
+      background: #0004ff;
+      color: #ffffff;
+      font-weight: bold;
+      opacity: .75;
+      z-index: 0;
+    }
+
+    body {
+      --s: 25vmin;
+      --p: calc(var(--s) / 2);
+      --c1: rgb(162, 0, 255);
+      --c2: rgb(30, 255, 244);
+      --c3: rgb(229, 255, 0);
+      --bg: var(--c3);
+      --d: 4000ms;
+      --e: cubic-bezier(0.76, 0, 0.24, 1);
+
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+      background-size: var(--s) var(--s);
+      background-position:
+        calc(var(--p) * 1) calc(var(--p) * 0),
+        calc(var(--p) * -1) calc(var(--p) * 1),
+        calc(var(--p) * 1) calc(var(--p) * -1),
+        calc(var(--p) * -1) calc(var(--p) * 0);
+      animation:
+        color var(--d) var(--e) infinite,
+        position var(--d) var(--e) infinite;
+    }
+
+    @keyframes color {
+
+      0%,
+      25% {
+        --bg: var(--c3);
+      }
+
+      26%,
+      50% {
+        --bg: var(--c1);
+      }
+
+      51%,
+      75% {
+        --bg: var(--c3);
+      }
+
+      76%,
+      100% {
+        --bg: var(--c2);
+      }
+    }
+
+    @keyframes position {
+      0% {
+        background-position:
+          calc(var(--p) * 1) calc(var(--p) * 0),
+          calc(var(--p) * -1) calc(var(--p) * 1),
+          calc(var(--p) * 1) calc(var(--p) * -1),
+          calc(var(--p) * -1) calc(var(--p) * 0);
+      }
+
+      25% {
+        background-position:
+          calc(var(--p) * 1) calc(var(--p) * 4),
+          calc(var(--p) * -1) calc(var(--p) * 5),
+          calc(var(--p) * 1) calc(var(--p) * 3),
+          calc(var(--p) * -1) calc(var(--p) * 4);
+      }
+
+      50% {
+        background-position:
+          calc(var(--p) * 3) calc(var(--p) * 8),
+          calc(var(--p) * -3) calc(var(--p) * 9),
+          calc(var(--p) * 2) calc(var(--p) * 7),
+          calc(var(--p) * -2) calc(var(--p) * 8);
+      }
+
+      75% {
+        background-position:
+          calc(var(--p) * 3) calc(var(--p) * 12),
+          calc(var(--p) * -3) calc(var(--p) * 13),
+          calc(var(--p) * 2) calc(var(--p) * 11),
+          calc(var(--p) * -2) calc(var(--p) * 12);
+      }
+
+      100% {
+        background-position:
+          calc(var(--p) * 5) calc(var(--p) * 16),
+          calc(var(--p) * -5) calc(var(--p) * 17),
+          calc(var(--p) * 5) calc(var(--p) * 15),
+          calc(var(--p) * -5) calc(var(--p) * 16);
+      }
+    }
+
+    @media (prefers-reduced-motion) {
+      body {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div>
+      <a href="/logout" id="login-box-id" class="login-box-id btn btn-info btn-lg" style=" z-index: 3; ">
+        <span class="glyphicon glyphicon-log-out"></span> Log out
+      </a>
+    </div>
+  </div>
+
+  <ul id="messages"></ul>
+  <form id="form" action="">
+    <input id="input" autocomplete="off" /><button>Send</button>
+  </form>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    var socket = io();
+
+    var messages = document.getElementById('messages');
+    var form = document.getElementById('form');
+    var input = document.getElementById('input');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (input.value) {
+        socket.emit('chat message', input.value);
+        input.value = '';
+      }
+    });
+
+    socket.on('chat message', function (msg) {
+      var item = document.createElement('li');
+      item.textContent = msg;
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  </script>
+</body>
+
+</html>

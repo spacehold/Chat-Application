@@ -3,10 +3,32 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "@socket.io/admin-ui": "^0.2.0",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "mongoose": "^6.0.4",
+    "mongoose-findorcreate": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
     "socket.io": "^4.1.2"
   },
   "scripts": {
     "start": "node index.js"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socketio/chat-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/socketio/chat-example/issues"
+  },
+  "homepage": "https://github.com/socketio/chat-example#readme"
 }
