@@ -1,1 +1,1 @@
-#Some chat applicaiton
+# Some chat applicaiton
